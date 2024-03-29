@@ -11,3 +11,25 @@
 时间片轮转算法按照时间片的长度依次调用进程直至全部进程结束。该调度关键点在于时间片大小的选取。
 时间片的设置应考虑系统对响应时间的要求，就绪队列中的进程数目，系统的处理能力。
 
+
+
+
+
+
+
+Process management
+
+This library contains C language versions of three basic process management scheduling algorithms: first come first served scheduling algorithm, 
+short job priority scheduling algorithm and time slice round robin scheduling algorithm.
+
+The first-come, first-served scheduling algorithm schedules processes in the order in which they arrive.
+
+The short job priority algorithm schedules according to the length of the remaining running time of the process. 
+The shorter the time, the higher the priority and the order in which it is called.
+The short job priority algorithm has two modes: preemptive SJF and non-preemptive SJF. 
+Preemptive SJF preemption occurs when a process shorter than the remaining time slice of the current process arrives. 
+SJF is optimal for a given set of processes, giving the shortest average waiting time.
+
+The time slice rotation algorithm calls processes sequentially according to the length of the time slice until all processes end. 
+The key point of this scheduling is the selection of time slice size. The setting of the time slice should consider the system's response time requirements, 
+the number of processes in the ready queue, and the system's processing capabilities.
